@@ -1,0 +1,175 @@
+/* General Styles */
+html, body {
+    background-color: #c0c0c0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size:18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.navContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    width: 100%;
+}
+.im {
+    width: 250px;
+    height: auto;
+}
+
+/* Info Container */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 90%;
+}
+
+/* Speed, Road, and Alert Containers */
+.speed-road-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Individual Info Card */
+.info-card {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Road should appear between Speed and Alert */
+#road-container {
+    order: 2; /* Moves it between Speed and Alert */
+}
+#speed-container {
+    order: 1;
+}
+#alert-container {
+    order: 3;
+}
+
+/* Road Safety Instructions */
+.safety-instructions {
+    background-color: #ffc107;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 90%;
+}
+
+.safety-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.safety-item img {
+    width: 70px;
+    height: 70px;
+}
+
+.footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+/* Start Driving Button Styles */
+#start-driving-btn {
+    background-color: #007bff; /* Same as speed container */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    height: 100px;
+    max-width: 400px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block; /* Initially visible */
+}
+
+/* Hide speed, road, and alert containers initially */
+.speed-road-container {
+    display: none;
+}
+/* SOS Button Styling */
+#sosButton {
+    background-color: red; /* Emergency color */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    max-width: 400px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speed-road-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    .info-card {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-card {
+        font-size: 13px;
+        padding: 10px;
+    }
+    .safety-item img {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (max-width: 480px) {
+    #start-driving-btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* Make it responsive */
+@media (max-width: 480px) {
+    #sosButton {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
